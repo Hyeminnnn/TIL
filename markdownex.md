@@ -234,3 +234,63 @@ if 4 in [1,2,3,4]: print("4가 있습니다.")
 
 ​          
 
+## 22.01.27
+
+### rely-test
+
+> `A computer` 와 `B computer` , 즉 두개의 로컬과 하나의 원격 저장소(hub)에 올리기를 하는 것
+
+
+
+1. 순서 정리(a computer)
+
+   (1) 홈폴더에서 git bash 열기
+
+   (2) mkdir a computer(가정)하고 코드로 열기
+
+   (3)touch a.txt 파일 하나 생성 
+
+   (4)git init으로 관리 시작 (**홈폴더**에서 하면 안되니 필수로 확인하고) (~/acomputer)
+
+   (5)ls -a  숨김으로 .git 폴더 만들어 졌는지 확인 한번
+
+   (6)git status - 현재 상황 확인 
+
+   (7)텍스트 파일 아무거나 치고 `ctrl`+`s` 저장 
+
+   (8)git add .
+
+   (9)git commit -m '내용'
+
+   (10)git log --oneline 으로 커밋 잘됐는지 확인
+
+   (11)hub에서 new depository 하나 만들고 고유 주소 받기
+
+   (12)git remote add origin '주소'
+
+   (13)git remote -v 잘 연결 됐는지 확인
+
+   (14)git push origin master 로 허브에 올리기  
+
+   ---
+
+   (b computer)
+
+   (1) a computer a.txt hub에 고유 주소 copy
+
+   (2) 홈폴더에서 git bash 열고 
+
+   (3) git clone (홈폴더에서 해도 상관없음)
+
+   (4)파일 하나 새로 만들고 위 과정 반복 commit 까지
+
+   (5)git log로 확인 한번 해주고
+
+   (5) git push origin master 로 a computer a.txt 내용 내려받기
+
+   ---
+
+   (a computer)
+
+   (1)git pull origin master로 b가 쓴 내용 내려받기
+
