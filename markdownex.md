@@ -85,7 +85,7 @@ if 4 in [1,2,3,4]: print("4가 있습니다.")
 
 ## 22.01.26
 
-### vscode로 GUI,CLI 환경 동시에 보기 , GIT 사용 
+### GIT 사용 
 
 
 
@@ -193,4 +193,44 @@ if 4 in [1,2,3,4]: print("4가 있습니다.")
 
 * 저장하기 -> git add . -> git commit -m '~~~~' -> git status -> git log --oneline : one cycle
 
-  
+* .gitignore : 특정 파일이나 폴더에 git이 버전관리 못하도록 저장하는 것 
+
+  -`gitignore.io` 사이트에 개발 환경 맞게 복붙 해서 사용 
+
+
+
+##  clone 사용
+
+> 로컬 저장소에서 만들어서 hub 올리는 것과 반대 개념 
+>
+> hub에서 로컬로 가져오는 것
+>
+> **홈폴더**에서 안만들어도 되는 이점 
+
+
+
+* git clone
+  * hub에서 new depository (아무거나) 생성 
+  * 주소 복사
+  * vscode 터미널 창에서 `git clone 주소` 작성
+  * `git clone`은 init 처럼 한번만 
+
+---
+
+
+
+* git push 
+
+  * 컴퓨터 A - 컴퓨터 B 
+
+  * ```bash
+    $ touch day2.md
+    $ git add .
+    $ git commit -m "강의장에서 Day2 작성"
+    $ git push origin master #pull 말고 
+    ```
+
+  * push와 pull 사용 하며 끝말잇기 
+
+​          
+
